@@ -1,10 +1,10 @@
 version: '3'
 services:
   httpd:
-    build: httpd/.
+    build: webserver/.
     ports:
       - "80:80"
   tomcat:
-    build: tomcat/.
+    build: appserver/.
     ports:
       - "8080:8080"
