@@ -8,6 +8,8 @@ services:
     build: appserver/.
     ports:
       - "8080:8080"
+  dbsetup:
+    build: db-setup/.   
   mariadb:
     image: mariadb
     environment:
