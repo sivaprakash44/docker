@@ -12,6 +12,8 @@ services:
     build: db-setup/.   
   mariadb:
     image: mariadb
+    volumes:
+      - /home/centos/mariadb:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
 
