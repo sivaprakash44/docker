@@ -1,11 +1,11 @@
 #!/bin/bash 
 
-if [ ! -f Dockerfile ]; then 
+if [ ! -f dockerfile ]; then 
     echo -e "\e[31m Dockerfile missing\e[0m"
     exit 1
 fi 
 
-IMAGE=$(head -1 Dockerfile | grep '^#' | sed -e 's/#//')
+IMAGE=$(head -1 dockerfile | grep '^#' | sed -e 's/#//')
 if [ -z "$IMAGE" ]; then 
     echo -e "\e[33m IMAGE_NAME is missing\e[0m"
     exit 2
